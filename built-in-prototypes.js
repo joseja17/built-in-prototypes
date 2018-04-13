@@ -9,7 +9,14 @@
 //dragonMapper should return the the new array. You should
 //use the built-in array method .map
   
-  //Code here
+  function dragonMapper(array){
+    var newArr = array.map(function(x){
+      return x+='...here be dragons'
+    })
+    return newArr
+    }
+    
+  
 
 
 
@@ -20,7 +27,20 @@
 //does NOT have the key favoriteCookie.
 //cookieLoversOnly should return the filtered array.
   
-  //Code here
+    function cookieLoversOnly(array){
+      var newArr =  array.filter(obj => 
+      //   {var x = false
+      //   for(var key in obj){
+      //     if(key === 'favoriteCookie'){
+      //       x = true
+      //   }
+        
+      // }
+      // return x }
+      obj.favoriteCookie
+        )
+      return newArr;
+    }
 
 
 //////////////////PROBLEM 3////////////////////
@@ -34,7 +54,11 @@
 //Hint: there is an array method for this.
 
 
-  //Code here
+  function changeValue(array, cb){
+    array.forEach(key=>{
+      cb(key)
+    })
+  }
 
 
 
@@ -46,7 +70,12 @@
 //of multiplying all the elements together)
 //Return the product.
   
-  //Code here
+  function findProduct(array){
+    var product = array.reduce(function(a,b){
+      return a*b;
+    })
+    return product;
+  }
 
 
 //////////////////PROBLEM 5////////////////////
@@ -63,7 +92,11 @@
 // character at index 2 of "wide": "d"
 // cipherize will return: "d"
 
-  //Code here
+  function cipherize(array, str){
+    var index = array.indexOf(str);
+   var character = str.charAt(index);
+   return character
+  }
 
 
 
@@ -74,4 +107,9 @@
 //string. Use built-in methods for taking the string 
 //apart, reversing it, and putting it back together again.
 
-  //Code here
+  function reverseMe(str){
+    var splitString = str.split("");
+    var reverseArray = splitString.reverse();
+    var joinArray = reverseArray.join("");
+    return joinArray;
+  }
